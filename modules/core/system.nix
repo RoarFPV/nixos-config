@@ -8,11 +8,11 @@
       substituters = [ "https://nix-gaming.cachix.org" ];
       trusted-public-keys = [ "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4=" ];
     };
-    gc = {
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 7d";
-    };
+    # gc = {
+    #   automatic = true;
+    #   dates = "weekly";
+    #   options = "--delete-older-than 7d";
+    # };
   };
   nixpkgs = {
     overlays = [
@@ -26,7 +26,16 @@
     git
   ];
 
-  time.timeZone = "Europe/Paris";
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      stdenv.cc.cc
+    ];
+  };
+
+  # Set your time zone.
+  time.timeZone = "America/Los_Angeles";
+
   i18n.defaultLocale = "en_US.UTF-8";
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "24.05";

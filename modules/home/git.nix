@@ -3,12 +3,23 @@
   programs.git = {
     enable = true;
     
-    userName = "Frost-Phoenix";
-    userEmail = "67cyril6767@gmail.com";
+    delta = {
+      enable = true;
+    };
+
+    lfs.enable = true;
+    userName = "roarfpv";
+    userEmail = "roarfpv@gmail.com";
     
     extraConfig = { 
       init.defaultBranch = "main";
-      credential.helper = "store";
+      credential.helper = "cache";
+      core.sshCommand = "ssh -i /home/john/.ssh/roar_id";
+      commit.gpgsign = true;
+      gpg.format = "ssh";
+      gpg.ssh.allowedSignersFile = "~/.ssh/allowed_signers";
+      # status.showUntrackedFiles = "no";
+      user.signingkey = "~/.ssh/roar_id.pub";
     };
   };
 

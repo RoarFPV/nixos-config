@@ -1,8 +1,8 @@
-{ ... }: 
+{ ... }:
 {
   wayland.windowManager.hyprland = {
     settings = {
-      
+
       # autostart
       exec-once = [
         "systemctl --user import-environment &"
@@ -20,13 +20,15 @@
       ];
 
       input = {
-        kb_layout = "us,fr";
-        kb_options ="grp:alt_caps_toggle"; 
+        kb_layout = "us";
+        kb_options = "grp:alt_caps_toggle";
         numlock_by_default = true;
         follow_mouse = 1;
         sensitivity = 0;
         touchpad = {
           natural_scroll = true;
+          disable_while_typing = true;
+          tap-to-click = true;
         };
       };
 
@@ -133,7 +135,7 @@
         "$mainMod, Return, exec, kitty"
         "ALT, Return, exec, kitty --title float_kitty"
         "$mainMod SHIFT, Return, exec, kitty --start-as=fullscreen -o 'font_size=16'"
-        "$mainMod, B, exec, hyprctl dispatch exec '[workspace 1 silent] floorp'"
+        "$mainMod, B, exec, hyprctl dispatch exec '[workspace 1 silent] brave'"
         "$mainMod, Q, killactive,"
         "$mainMod, F, fullscreen, 0"
         "$mainMod SHIFT, F, fullscreen, 1"
@@ -294,7 +296,7 @@
     };
 
     extraConfig = "
-      monitor=,preferred,auto,auto
+      monitor=,1920x1200@165,auto,1
 
       xwayland {
         force_zero_scaling = true

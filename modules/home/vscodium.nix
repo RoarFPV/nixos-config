@@ -18,6 +18,8 @@
       # Color theme
       catppuccin.catppuccin-vsc
       catppuccin.catppuccin-vsc-icons
+
+      ziglang.vscode-zig
     ];
     userSettings = {
       "update.mode" = "none";
@@ -50,18 +52,18 @@
       "explorer.openEditors.visible" = 0;
       "breadcrumbs.enabled" = false;
       "editor.renderControlCharacters" = false;
-      "workbench.activityBar.location" = "hidden";
+      # "workbench.activityBar.location" = "hidden";
       "workbench.statusBar.visible" = false;
       "editor.scrollbar.verticalScrollbarSize" = 2;
       "editor.scrollbar.horizontalScrollbarSize" = 2;
-      "editor.scrollbar.vertical" = "hidden";
+      # "editor.scrollbar.vertical" = "hidden";
       "editor.scrollbar.horizontal" = "hidden";
       "workbench.layoutControl.enabled" = false;
 
       "editor.mouseWheelZoom" = true;
 
       "C_Cpp.autocompleteAddParentheses" = true;
-      "C_Cpp.formatting" = "clangFormat";
+      "C_Cpp.formatting" = "vcFormat";
       "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyFunction" = true;
       "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyType" = true;
       "C_Cpp.vcFormat.space.beforeEmptySquareBrackets" = true;
@@ -84,6 +86,9 @@
       "C_Cpp.workspaceParsingPriority" = "medium";
       "C_Cpp.clang_format_sortIncludes" = true;
       "C_Cpp.doxygen.generatedStyle" = "/**";
+      "zig.zls.path" = "/home/john/.config/VSCodium/User/globalStorage/ziglang.vscode-zig/zls_install/zls";
+      "zig.path" = "/home/john/zig/0.13.0/files/zig";
+
     };
     # Keybindings
     keybindings = [

@@ -63,5 +63,14 @@
     xdg-utils
     xxd
     inputs.alejandra.defaultPackage.${system}
+
+    brave
+    framework-tool
+    lm_sensors
+    obsidian
+    nixpkgs-fmt
+    # spotify
+    autoPatchelfHook
+    ghidra
   ]);
 }
